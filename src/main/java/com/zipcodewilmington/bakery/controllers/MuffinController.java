@@ -28,6 +28,7 @@ public class MuffinController {
     public ResponseEntity<Muffin> create(@RequestBody Muffin baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
+
     @PostMapping ("/{id}")
     public ResponseEntity<Muffin> update(@PathVariable Long id,@RequestBody Muffin baker) {
         return new ResponseEntity<>(service.update(id, baker), HttpStatus.OK);
